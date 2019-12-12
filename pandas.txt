@@ -63,6 +63,9 @@ for key in ['A','B','C']:
 df.groupby('key').sum() : 以Key當成分割對象，計算總合
 df.groupby('key').aggregate(np.mean) : 以Key為分割對象，計算個個的平均
 
+df.groupby('Sex')['Age'].mean() : 根據SEX做Groupby 並且計算其mean值
+
+
 
 
 
