@@ -35,6 +35,9 @@ df['Fare'][0:5] > 40 : 顯示前五項Fare大於40的情況
 		       Allen, Mr. William Henry                               False
 
 
+(train['Type 1']=='Water').values 取出 Type 1 等於Water的true or false
+
+
 df[df['Fare'] > 40][:5] : 顯示前五項Fare大於40的項目(只顯示Fare大於40的)
 df[df['Sex'] == 'male'][:5] : 列出Sex為女性的前5項
 df.loc[df['Sex'] == 'male','Age'].mean() : 算出Sex為 male的平均年齡
@@ -65,14 +68,28 @@ df.groupby('key').aggregate(np.mean) : 以Key為分割對象，計算個個的平均
 
 df.groupby('Sex')['Age'].mean() : 根據SEX做Groupby 並且計算其mean值
 
+df['Type 1'].unique() : 看type1內有幾種不同的資料
 
 
 
+========================05==========================
+math caculation
 
 
+	A	B	C
+a	1	2	3
+b	4	5	6
+df.sum(axis = 0) : 按照col進行加總
+df.sum(axis = 1) : 按照row進行加總
+df.mean(axis = 0): 按照col算平均
+df.mean(axis = 1): 按照row算平均.
+df.min(axis = 0) : 按照col找最小值
+df.min(axis = 1) : 按照row找最小值
+df.max(axis = 0) : 按照col找最大值
+df.max(axis = 1) : 按照row找最大值
 
-
-
+df.corr()
+df['Age'].value_counts() : 計算age內各個年齡的數量
 
 
 
