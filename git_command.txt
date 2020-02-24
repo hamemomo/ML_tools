@@ -1,0 +1,14 @@
+
+
+
+git config
+
+
+
+檢查git 狀態
+git status 
+
+
+git add --all
+
+git commit -m "ADD DETAIL"
