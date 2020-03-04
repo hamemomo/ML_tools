@@ -1,5 +1,35 @@
+class list_resouce(object):
+    def __init__(self):
+        self.l = []
+        print("__init__ method")
+        print('creat empty list：{0}'.format(id(self)))
+
+    def extend_list(self, val, l=[]):
+        self.l = l
+        self.l.append(val)
+        print("in extend_list adress", self.l, id(self.l))
+        return self.l
+
+    def test_extend_list(self):
+        print("test_extend_list")
+        assert self.extend_list(1) == [1]
+
+        self.clear_list()
+        assert self.extend_list(2, []) == [2]
+
+        self.clear_list()
+        assert self.extend_list(3) == [3]
+        self.clear_list()
+
+    def clear_list(self):
+        self.l.clear()
+
+    def __del__(self):
+        print("__def__method")
 
 
+run = list_resouce()
+run.test_extend_list()
 
 # Pandas and numpy for data manipulation
 import pandas as pd
