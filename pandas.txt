@@ -88,7 +88,7 @@ df.min(axis = 1) : 按照row找最小值
 df.max(axis = 0) : 按照col找最大值
 df.max(axis = 1) : 按照row找最大值
 
-df.corr()
+df.corr().
 df['Age'].value_counts() : 計算age內各個年齡的數量
 
 
