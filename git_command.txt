@@ -12,3 +12,10 @@ git status
 git add --all
 
 git commit -m "ADD DETAIL"
+
+
+
+
+
+git config --global user.name <username>
+git config --global user.email <mailaddress>
