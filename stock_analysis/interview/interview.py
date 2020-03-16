@@ -27,7 +27,7 @@ def normalize(train):
 #定義餵入的feature跟label序列
 def train_(df, ref_day, predict_day):
     X_train, Y_train = [], []
-    for i in range(df.shape[0]-predict_day-ref_day):
+    for i in range(df.shape[0]+predict_day-ref_day+2):
         X_train.append(np.array(df.iloc[i:i+ref_day,:]))
         Y_train.append(np.array(df.iloc[i+ref_day:i+ref_day+predict_day]['收盤價']))
     return np.array(X_train), np.array(Y_train)
@@ -41,6 +41,11 @@ TWA00_test= normalize(data_test['TWA00'])
 ref_days = 7
 X_train,Y_train=train_(TWA00_train,ref_days,1)
 X_test,Y_test=train_(TWA00_test,ref_days,1)
+
+print(Y_test.shape)
+print(Y_train.shape)
+
+
 
 #split_boundary = int(X.shape[0] * 0.9)
 '''
