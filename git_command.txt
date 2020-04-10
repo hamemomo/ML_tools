@@ -19,4 +19,9 @@ git commit -m "ADD DETAIL"
 
 git config --global user.name <username>
 git config --global user.email <mailaddress>
-......
+
+
+to solve git "commit not contribute"
+$ git config --global user.name hamemomo
+$ git config --global user.email jim830206@gmail.com
+
